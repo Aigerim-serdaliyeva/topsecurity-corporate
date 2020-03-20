@@ -1,0 +1,195 @@
+.ct-contacts {
+    &__wrap {
+        position: relative; 
+         
+        input {
+            text-align: center;
+            @include flex-all-center();
+            font-family: Beausans; 
+            color:#111111;  
+            &::placeholder {
+                color: #111111;
+                opacity: 0.15;
+            }  
+        }       
+        article {
+            a {
+                color: #111111;
+            } 
+        }
+        button {
+            outline: none;
+            border: none;  
+            background:#EF3B39;
+            cursor: pointer;
+            span {
+                display: block;
+                color: #fff;
+                font-family: ProtoSans;
+                text-transform: uppercase;
+            }
+        }
+    }
+}
+
+
+
+@media (min-width: 960px) {
+    .ct-contacts {
+        background:url('~@/assets/images/ni/contacts-bg.jpg') no-repeat;
+        @include coverCenter;
+    @include flex-align-center();
+      &__wrap {        
+          @include size(h(700), 100%);                    
+          background: url('~@/assets/images/contacts/text-bg.png') no-repeat;
+          background-size: 100% 100%;
+          @include flex-align-center();
+          justify-content: flex-end;         
+          section:first-child {
+              @include flex-all-center-column();
+              @include size(auto, w(602));
+              text-align: center;
+          }
+          h2 {
+              font-family: Beausans;
+            font-size: w(24);
+            color: #111111;            
+        }
+        .call-err {
+            padding: 0; margin-bottom: wm(10);
+            color: #EF3B39;
+        }
+        input {                                
+          margin: w(35) auto;                
+          border: w(2) solid #EF3B39;                
+          box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.25);
+          @include size(w(61), w(466));
+          font-size: w(24);                                                     
+        }
+        button {                  
+            transform: skewX(-20deg);                  
+            box-shadow: 0 w(2) w(2) rgba(0, 0, 0, 0.4);                            
+            span {             
+              font-size: w(24);
+              transform: skewX(20deg);              
+              padding: w(20);        
+            }          
+        }
+        section:last-child {     
+            @include size(auto, w(960));     
+            align-self: flex-start;    
+            margin-left: w(182);       
+            margin-top: w(2);                 
+        }
+        .map {
+            @include size(h(363), 100%);                
+        }
+        // .contacts-svg-0 {
+        //     @include size(w(20), w(15));
+        // }
+        // .contacts-svg-1 {
+        //     @include size(w(19), w(19));
+        // }
+        // .contacts-svg-2 {
+        //     @include size(w(17), w(22));
+        // }
+        // .contacts-svg-3 {
+        //     @include size(w(20), w(20));
+        // }
+        // .contacts-svg-4 {
+        //     @include size(w(20), w(20));
+        // }            
+        .cc {
+            padding-left: w(200);
+            article {
+                display: flex; align-items: center;   
+                margin-top: h(14);                                      
+            }
+            a {
+                font-size: h(22);            
+                color: #111111;    
+                font-family: Beausans;              
+            }
+            svg {
+                width: h(22);
+                max-height: 100%;
+                margin-right: w(15);
+            }            
+        }
+
+        p {                                    
+            font-size: w(24);
+            color: #000;            
+            padding: w(20) w(86) 0 w(400);            
+            text-align: left;
+            
+        }
+      }
+    }
+}
+
+@media (max-width: 960px) {
+    .ct-contacts {
+        &__wrap {
+            position: relative;
+            main {
+                padding: wm(200) wm(111);
+                background: url('~@/assets/images/mobile/contacts-bg.png') no-repeat;
+                background-size: 100% 100%;
+            }
+            p {
+                text-align: center;
+                color:#111111; 
+                font-size: wm(46);
+                &:first-child {
+                    padding-bottom: wm(100);
+                    position: relative;                    
+                    &::after {
+                        @include before;
+                        display: block;
+                        bottom: 0; left: 0; right: 0; margin: auto;
+                        @include size(wm(3), wm(414));
+                        background: #EF3B39;                        
+                    }                    
+                }
+                &:nth-child(2) {
+                    padding-top: wm(100);
+                } 
+            }
+            .cc {                
+                article {
+                    display: flex; align-items: center;   
+                    margin-top: wm(20);                                
+                }
+                a {
+                    font-size: wm(46);            
+                    color: #111111;
+                    font-family: Beausans;              
+                }
+                svg {
+                    width: wm(35);                        
+                    margin-right: wm(55);
+                }
+           
+            }    
+            input {                                
+                margin: wm(50) auto;                
+                border: wm(3.6824) solid #EF3B39;
+                box-shadow: 0 wm(7.36481) wm(7.36481) rgba(0, 0, 0, 0.25);
+                @include size(wm(130), 100%);
+                font-size: wm(46);                                                     
+              }
+              button {       
+                  display: block;
+                  margin: auto;           
+                transform: skewX(-20deg);                  
+                box-shadow: 0 w(2) w(2) rgba(0, 0, 0, 0.4);                            
+                span {             
+                  font-size: wm(46);
+                  transform: skewX(20deg);              
+                  padding: wm(30);        
+                }          
+            }  
+        }
+    }
+}

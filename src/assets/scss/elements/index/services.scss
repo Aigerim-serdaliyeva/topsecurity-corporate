@@ -1,0 +1,18 @@
+.ct-index__services {
+    background: url('@/assets/images/services/primary-bg.jpg') no-repeat;
+    @include coverCenter;
+}
+
+@media (min-width: 960px) {
+    .ct-index__services {
+      
+    }    
+}
+
+
+
+@media (max-width:960px) {
+    .ct-index__services  {       
+     
+    }
+}

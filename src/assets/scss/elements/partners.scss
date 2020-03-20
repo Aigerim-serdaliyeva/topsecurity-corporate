@@ -1,0 +1,106 @@
+
+
+
+@media (min-width: 960px) {
+    .ct-partners {
+        background:url('~@/assets/images/ni/partners-bg.jpg') no-repeat;
+        @include coverCenter;
+    }
+    .ct-partners {
+        @include flex-all-center();
+        &__wrap {
+            position: relative;            
+            background: url('~@/assets/images/partners/bg.png') no-repeat;
+            @include coverCenter;
+            @include size(w(429), 100%);
+            @include flex-align-center();
+            &__slider {                
+                width: 100%;
+                color: #000;
+                &__image {                    
+                    @include flex-all-center();                                        
+                }                                           
+                .partners-1 {                                     
+                    @include size(w(72),w(307));
+                    margin-top: w(30);
+                }                                    
+                .partners-2 {                    
+                    @include size(w(144),w(150))
+                }            
+                .partners-3 {                    
+                    @include size(w(150),w(121.88))
+                }            
+                .partners-4 {                    
+                    @include size(w(67),w(335));
+                    margin-top: w(40);
+                }            
+                .partners-5 {                    
+                    @include size(w(144),w(175))
+                }            
+                .partners-6 {                    
+                    @include size(w(108),w(299));
+                    margin-top: w(15);
+                }            
+                .partners-7 {                    
+                    @include size(w(144.21),w(224.72))
+                }            
+                .partners-8 {                    
+                    @include size(w(108.16),w(143.55));
+                    margin-top: w(15);
+                }                  
+                .partners-9 {                    
+                    @include size(w(158.16),w(271.59));
+                    position: relative;
+                    bottom: w(10);
+                }                  
+            }
+        }
+    }    
+}
+
+
+
+@media (max-width:960px) {
+    .ct-partners  {       
+        &__wrap {
+            position: relative;
+            main {
+                background:url('~@/assets/images/mobile/partners-bg.png') no-repeat;
+                background-size: 100% 100%;
+                @include flex-align-center-column;
+                padding: wm(150) 0;
+                img {
+                    display: block; margin-bottom: wm(40);
+                    margin-left: auto; margin-right: auto;
+                }
+                .partners-1 {                                     
+                    @include size(wm(127),wm(544))
+                }                                    
+                .partners-2 {                    
+                    @include size(wm(255),wm(266))
+                }            
+                .partners-3 {                    
+                    @include size(wm(308),wm(250))
+                }            
+                .partners-4 {                                        
+                    @include size(wm(118),wm(594))
+                }            
+                .partners-5 {                    
+                    @include size(wm(255),wm(310))
+                }            
+                .partners-6 {                    
+                    @include size(wm(191),wm(530))
+                }            
+                .partners-7 {                    
+                    @include size(wm(300),wm(500))
+                }            
+                .partners-8 {                    
+                    @include size(wm(250),wm(350))
+                }                  
+                .partners-9 {                    
+                    @include size(wm(400),'')
+                }      
+            }
+        }
+    }
+}

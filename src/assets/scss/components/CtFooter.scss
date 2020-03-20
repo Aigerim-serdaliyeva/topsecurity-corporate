@@ -1,0 +1,109 @@
+footer {
+    background: #212121;
+    line-height: normal;
+    .footer-menu {
+      height: auto;
+      margin: 0;
+      padding: 0;
+    }
+    
+    h2 {
+      font-family: Spectral-semibold;
+      text-transform: uppercase;
+    }
+    a {
+      font-family: Spectral-light;
+      text-transform: lowercase;
+      line-height: normal;
+      white-space: pre;
+      color: #fff;
+    }
+    .line {
+      background: #FFB800;
+    }
+    .footer-copyright {
+      text-align: center;
+      font-family: Spectral-light;
+      text-transform: lowercase;
+      line-height: normal;
+      white-space: pre;
+    }         
+}
+.dark-footer {    
+    color: #fff;
+    svg {
+        path {
+            fill: #fff;
+        }
+    }
+}
+
+@media (min-width:960px) {
+    footer {        
+      padding: vw(122) 0 vw(16);
+      .footer-menu {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      svg {
+        height: vw(365.84);
+        width: vw(417.96);
+      } 
+      ul {
+        margin-left: vw(116);
+        display: flex;
+      }
+      li {
+        margin-right: vw(143);
+      }
+      h2 {
+        font-size: vw(31);                
+      }  
+      article {
+        margin-left: vw(13.98);
+      }
+      a {        
+        font-size: vw(20);                
+      } 
+      .line {
+        margin: vw(17) 0;
+        height: vw(5);
+        width: vw(55);        
+      } 
+      .footer-copyright {        
+        margin-top: vw(48.16); 
+        font-size: vw(15);
+      }     
+    }
+}
+
+@media (max-width: 960px) {
+    footer {
+        padding: vwm(32) 0;
+        text-align: center;        
+        svg {
+            @include size(vwm(168.55), vwm(192.56));
+        }
+        h2 {
+            font-size: vwm(18); 
+            margin-bottom: vwm(12);
+        }
+        a {
+            margin: vwm(12) 0 vwm(20);
+            font-size: vwm(14);
+        }
+        ul {
+            margin-top: vwm(40.45);
+        }
+        .line {            
+            @include size(vwm(2), vwm(41));
+            margin: auto;                             
+        } 
+        .footer-copyright {        
+            margin-top: vwm(50); 
+            font-size: vwm(15);            
+            white-space: normal;
+          }    
+    }
+}

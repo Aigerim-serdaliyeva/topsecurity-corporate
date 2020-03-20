@@ -1,0 +1,137 @@
+.ct-article {
+    &__wrap {
+        section:first-child {
+            h2 {  color: #EF3B39; font-family: ProtoSans; text-transform: uppercase; }
+            p { color: #111111; opacity:0.8; }
+        }
+    }
+}
+
+@media (min-width: 960px) {
+    .ct-article {
+        background:url('~@/assets/images/ni/article-bg.jpg') no-repeat;
+        @include coverCenter;
+        @include flex-align-end();        
+        &__wrap {
+            position: relative;
+            display: flex;
+            width: 100%;
+            section:first-child {                
+                @include size(auto, w(1225));
+                background: url('~@/assets/images/article/text-bg.png') no-repeat;
+                background-size: 100% 100%;
+                @include flex-align-center();
+                article {
+                    margin: auto;                    
+                    @include size(h(842), 70%);                                                
+                    padding: h(70) 0;                    
+                }            
+                h2 {
+                    font-size: w(30);
+                    margin-bottom: h(20);                    
+                    flex: 1;                    
+                }
+                p {
+                    @include size(90%, 100%);                    
+                    font-size: w(25);                    
+                    overflow-y: scroll;  
+                    -webkit-overflow-scrolling: touch;
+                    padding-right: w(68);
+                    @include scrollRed();
+                }
+            }
+            section:last-child {
+                @include size(h(659), w(534.67));
+                
+                margin-left: w(84.33);
+                overflow-y: scroll;      
+                -webkit-overflow-scrolling: touch;
+                @include scrollWhite();   
+                padding-right: w(20);  
+                
+            }
+            &__aside-item {
+                padding: h(21.8) 0;
+                display: flex;      
+                justify-content: space-between;
+                border-bottom: w(2) solid #A1A1A1;                                                
+                &:first-child {
+                    border-top: w(2) solid #A1A1A1;                                    
+                }
+                img {
+                    @include size(w(130),w(160.43));                                   
+                }
+                article {
+                    flex:0.95;                    
+                }
+                h2 {
+                    font-size: w(17);
+                    text-transform: uppercase;  
+                    cursor: pointer; 
+                    position: relative;
+                    display: block;
+                    &::before {
+                        @include before();
+                        bottom: 0; left: 0;
+                        @include size(w(1), 0);
+                        background-color: #EF3B39;
+                        transition: 0.3s;
+                    }      
+                    &:hover {
+                        color: #EF3B39;
+                    }           
+                    &:hover::before {
+                        width: 100%;                        
+                    }   
+                }
+                .active-border {
+                    color: #EF3B39;
+                    &::before {
+                        width: 100% !important;                        
+                    }
+                }                
+                p {                                        
+                    font-size: w(16);         
+                    margin: w(9.17) 0;           
+                }
+                &__date {
+                    border-top: w(1) solid #fff;
+                    padding-top: w(2);
+                    @include flex-justify-space();
+                    a,span {
+                        display: block;
+                        font-family: Beausans;
+                        font-size: w(16);
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+@media (max-width: 960px) {    
+    .ct-article {        
+        &__wrap {
+            position: relative;            
+            section {                                                
+                @include size(auto, 100%);
+                background: url('~@/assets/images/mobile/big-hidden.png') no-repeat;
+                background-size: 100% 100%;
+                @include flex-align-center();
+                article {                                                                                                      
+                    padding: wm(70) wm(111);                    
+                }                            
+                h2 {  color: #EF3B39; font-family: ProtoSans; text-transform: uppercase; }
+                p { color: #111111; }
+                h2 {
+                    font-size: wm(64);
+                    margin-bottom: wm(30);                                        
+                }
+                p {                       
+                    font-size: wm(46);                                                                                
+                }
+        }
+    }
+}
+}

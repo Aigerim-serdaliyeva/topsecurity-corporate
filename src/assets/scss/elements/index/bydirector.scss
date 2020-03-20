@@ -1,0 +1,60 @@
+
+.ct-index__bydirector {          
+    display: flex;    
+    justify-content: center;
+    align-items: flex-end; 
+    line-height: normal;
+    position: relative;
+    p {        
+        color: #fff;
+        text-align: center;        
+        font-family: NewCycle;                        
+        line-height: normal;        
+    }
+
+}
+
+@media (min-width: 960px) {
+    .ct-index__bydirector {        
+        height: vw(1084);        
+        p {
+            font-size: vw(35);
+            position: absolute;                    
+            bottom: vw(200); 
+            width: 100%;
+            padding:0 vw(184);
+            text-shadow: 0 vw(4) vw(4) rgba(0, 0, 0, 0.25);
+        }
+
+    }
+    .webp .ct-index__bydirector {
+        background:url('./assets/images/bydirector/bg.jpg') no-repeat;
+        @include coverCenter;
+    }
+    
+    .no-webp .ct-index__bydirector {
+        background:url('./assets/images/bydirector/bg.jpg') no-repeat;
+        @include coverCenter;
+    }
+    
+}
+
+@media (max-width: 960px) {
+    .ct-index__bydirector {
+        @include size(vwm(791), 100%);
+        p {
+            font-size: vwm(18);
+            padding: 0 vwm(15); 
+            margin-bottom: vwm(20);           
+        }   
+    }
+    .webp .ct-index__bydirector {
+        background:url('./assets/images/bydirector/mobile-bg.jpg') no-repeat;
+        @include coverCenter;
+    }
+    
+    .no-webp .ct-index__bydirector {
+        background:url('./assets/images/bydirector/mobile-bg.jpg') no-repeat;
+        @include coverCenter;
+    }    
+}

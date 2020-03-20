@@ -1,0 +1,110 @@
+.menu {
+    @include posabs();
+    z-index: 10;    
+}
+
+nav {  
+.nav-item a {
+    color: #fff;                                                                                        
+    text-transform: uppercase;
+    font-family: ProtoSans;    
+    position: relative;                                                                
+    &:hover {                    
+        color: #EF3B39;                    
+    }
+}
+}
+
+@media(min-width: 960px) {
+    .menu {
+        @include size(w(103), 100%);
+        background:url('~@/assets/images/header/menu-bg.png') no-repeat;
+        @include coverCenter;
+        @include flex-justify-space();
+        &__numbers {
+            pointer-events: none;
+            position: absolute; top: w(12); left: w(277); bottom: 0; margin: auto;
+            a {
+                display: block;   
+                font-family: ProtoSans;             
+                color: #fff;
+                text-align: right;  
+                font-size: w(20);        
+                padding-top: w(6);
+                position: relative;
+                &:first-child {
+                    left: w(-40);
+                }
+                &:nth-child(2) {
+                    left: w(-20);
+                }
+                &:last-child {
+                        
+                }
+            }            
+            
+        }
+        &__line {
+            position: absolute; bottom: w(-30); left: 0;
+            @include size(w(80), w(863));
+        }
+        &__logo {
+            @include size(100%, w(259)); 
+            background: url('~@/assets/images/header/menu-logo-bg.svg') no-repeat;
+            @include coverCenter;
+            @include flex-align-center;
+            svg {
+                @include size(w(78), w(90));
+                margin-left: w(25);
+            }
+        }
+    }
+    nav {    
+        align-self: flex-end;                                                         
+        ul {
+            display: flex;                   
+            align-items: center;
+            position: relative;
+            bottom: wm(4);     
+        }              
+        .nav-item a {
+            font-size: w(30);   
+            &::before {
+                @include before();
+                top: 0; left: 0; 
+                @include size(100%, 100%);
+                background: #fff;
+                transform: skewX(-12deg) scale(1.5);
+                z-index: -1;                                                      
+                opacity: 0;
+            }                                                         
+        }                     
+        li {
+            margin-right: w(70);                                    
+        }
+    }    
+}
+
+        
+    
+
+.nav-mobile-enter-active, .nav-mobile-leave-active {
+  transition: 0.3s;
+}
+
+.nav-mobile-enter, .nav-mobile-leave-to /* .fade-leave-active до версии 2.1.8 */ {    
+    transform: translateY(-100%)
+  }
+
+.nav_active_yellow a {
+    color: #EF3B39 !important;    
+    &::before {
+        opacity: 1 !important;
+    }
+}
+
+// Класс используется на главной странице при скролле welcome блока с анимацией чтобы сделать меню фиксированным 
+.nav_fixed {
+    position: fixed;
+}
+
