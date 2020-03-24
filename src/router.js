@@ -25,9 +25,9 @@ const router = new Router({
       component: () => import("./views/Products.vue")
     },
     {
-      path: "/partners",
-      name: "partners",
-      component: () => import("./views/Partners.vue")
+      path: "/reviews",
+      name: "reviews",
+      component: () => import("./views/Reviews.vue")
     },
     {
       path: "/contacts",

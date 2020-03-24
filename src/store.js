@@ -12,7 +12,7 @@ const store = () =>
       menu: [
         { path: "about", ru: "О нас" },
         { path: "services", ru: "Услуги" },
-        { path: "partners", ru: "Клиенты" },
+        { path: "reviews", ru: "Отзывы" },
         { path: "article", ru: "Статьи" },
         { path: "contacts", ru: "Контакты" }
       ],
@@ -20,7 +20,7 @@ const store = () =>
         { path: "", ru: "Главная" },
         { path: "about", ru: "О нас" },
         { path: "services", ru: "Услуги" },
-        { path: "partners", ru: "Клиенты" },
+        { path: "reviews", ru: "Отзывы" },
         { path: "article", ru: "Статьи" },
         { path: "contacts", ru: "Контакты" }
       ],
